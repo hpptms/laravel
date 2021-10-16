@@ -27,13 +27,13 @@
       <div class="overflow-hidden shadow-xl sm:rounded-lg m-bottom kokuban">
         <div class="p-6 sm:px-20 border-gray-200 flex">
           <h2 class="text-2xl item">イベント予定</h2>
-          <div class="item"></div>
+          <div class="item"><livewire:date></div>
         </div>
       </div>
 
       <div class="overflow-hidden sm:rounded-lg container m-bottom">
         <div class="center">
-
+          <livewire:eventview>
         </div>
       </div>
 
@@ -41,7 +41,7 @@
 
         <div class="p-6 border-t border-gray-200">
           <div class="flex items-center">
-            
+            <livewire:avatar>
             <div class="ml-4 text-lg text-gray-600 leading-7 font-semibold"><a href="{{ route('dashboard') }}">プロフィール作成</a></div>
           </div>
 
