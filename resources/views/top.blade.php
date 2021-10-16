@@ -27,7 +27,7 @@
       <div class="overflow-hidden shadow-xl sm:rounded-lg m-bottom kokuban">
         <div class="p-6 sm:px-20 border-gray-200 flex">
           <h2 class="text-2xl item">イベント予定</h2>
-          <div class="item"><livewire:date></div>a
+          <div class="item"><livewire:date></div>
         </div>
       </div>
 
