@@ -4,7 +4,7 @@ namespace Livewire\Controllers;
 
 use Livewire\FileUploadConfiguration;
 
-class FilePreviewHandlerToheroku extends FilePreviewHandler
+class FilePreviewHandler
 {
     use CanPretendToBeAFile;
 

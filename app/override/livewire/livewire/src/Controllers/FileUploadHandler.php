@@ -6,7 +6,7 @@ use Livewire\TemporaryUploadedFile;
 use Livewire\FileUploadConfiguration;
 use Illuminate\Support\Facades\Validator;
 
-class FileUploadHandlerToheroku extends FileUploadHandler
+class FileUploadHandler
 {
     public function getMiddleware()
     {
