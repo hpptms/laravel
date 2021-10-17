@@ -26,7 +26,7 @@
     <body class="bg-gray-100">
         <div class="font-sans text-gray-900 antialiased">
           @include('parts.navigation-menu')
-            {{ $slot }}
+          @yield('content')
         </div>
 
     @livewireScripts

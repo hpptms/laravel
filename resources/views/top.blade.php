@@ -1,7 +1,8 @@
 @include('cdn.bootstrap')
 <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-<x-guest-layout>
+@extends('layouts.guest')
+@section('content')
   <div class="py-12">
 
     <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
@@ -73,4 +74,4 @@
         @include('parts.google-map')
         @include('javascript.modal-video')
         @include('cdn.stick')
-      </x-guest-layout>
+@endsection

@@ -1,4 +1,5 @@
-<x-guest-layout>
+@extends('layouts.guest')
+@section('content')
     <x-jet-authentication-card>
         <x-slot name="logo">
             @include('parts.authentication-card-logo')
@@ -45,4 +46,4 @@
             </div>
         </form>
     </x-jet-authentication-card>
-</x-guest-layout>
+@endsection

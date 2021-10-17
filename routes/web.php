@@ -5,6 +5,7 @@ use App\Http\Controllers\TwitterLoginController;
 use App\Http\Controllers\GoogleAuthController;
 use App\Http\Controllers\EventAddController;
 use App\Http\Controllers\EventController;
+use App\Http\Controllers\EventAuthController;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,13 +22,11 @@ Route::get('/', function () {
     return view('top');
 })->name('Home');
 
-Route::get('etc/event-view{page}', 'EventController@show');
+Route::resource('/event', 'EventController');
 
-Route::get('dashboard/event-change{page}', 'EventController@change');
+Route::middleware(['auth:sanctum', 'verified'])->resource('/eventauth', 'EventAuthController');
 
-// Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
-//     return view('dashboard');
-// })->name('dashboard');
+Route::post('/eventauth/change', 'EventAuthController@change')->name('event-change');
 
 Route::middleware(['auth:sanctum', 'verified'])->get('dashboard/welcome', function () {
     return view('dashboard/welcome');
@@ -43,13 +42,13 @@ Route::get('etc/policy', function () {
     return view('etc/policy');
 })->name('policy');
 
-Route::middleware(['auth:sanctum', 'verified'])->get('dashboard/event-create', function () {
-    return view('dashboard/event-create');
-})->name('create-event');
+// Route::middleware(['auth:sanctum', 'verified'])->get('dashboard/event-create', function () {
+//     return view('dashboard/event-create');
+// })->name('create-event');
 
-Route::post('dashboard/event-add', 'EventAddController@CreateEvent')->name('event-add');
+// Route::post('dashboard/event-add', 'EventAddController@CreateEvent')->name('event-add');
 
-Route::post('dashboard/event-change-Preview', 'EventAddController@ChangeEvent')->name('event-change');
+
 
 Route::middleware(['auth:sanctum', 'verified'])->get('dashboard/event-Preview', function () {
     return view('dashboard/event-Preview');

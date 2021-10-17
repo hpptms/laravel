@@ -32,7 +32,7 @@
           <div class="p-6">
             <div class="flex items-center">
               <img class="icon-64" src="https://res.cloudinary.com/danj8nvfr/image/upload/v1632648264/announcement_c7srjz.svg" alt="crete">
-              <div class="ml-4 text-lg text-gray-600 leading-7 font-semibold"><a href="{{ route('create-event') }}">イベント作成</a></div>
+              <div class="ml-4 text-lg text-gray-600 leading-7 font-semibold"><a href="{{ route('eventauth.create') }}">イベント作成</a></div>
             </div>
 
             <div class="ml-12">

@@ -10,6 +10,7 @@ class Event extends Model
     use HasFactory;
 
     protected $fillable = [
+        'id',
         'user_id',
     ];
 
@@ -21,6 +22,10 @@ class Event extends Model
     public function user()
     {
       return $this->belongsTo(User::class);
+    }
+
+    public function inevent() {
+      return $this->belongsTo(Inevent::class);
     }
 
 }
