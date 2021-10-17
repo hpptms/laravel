@@ -18,4 +18,9 @@ class Place extends Model
         'id',
         'place',
     ];
+
+    public function event()
+    {
+      return $this->hasone(Event::class);
+    }
 }

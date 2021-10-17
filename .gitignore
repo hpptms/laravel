@@ -13,7 +13,3 @@ npm-debug.log
 yarn-error.log
 /.idea
 /.vscode
-
-/vendor/bin/carbon
-/vendor/bin/sail
-/vendor/bin/var-dump-server

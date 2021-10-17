@@ -21,9 +21,9 @@ Route::get('/', function () {
     return view('top');
 })->name('Home');
 
-Route::get('etc/event-view{page}', [EventController::class, 'show']);
+Route::get('etc/event-view{page}', 'EventController@show');
 
-Route::get('dashboard/event-change{page}', [EventController::class, 'change']);
+Route::get('dashboard/event-change{page}', 'EventController@change');
 
 // Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
 //     return view('dashboard');
@@ -33,11 +33,11 @@ Route::middleware(['auth:sanctum', 'verified'])->get('dashboard/welcome', functi
     return view('dashboard/welcome');
 })->name('dashboard');
 
-Route::get('auth/login/twitter', [TwitterLoginController::class, 'redirectToProvider']);
-Route::get('login/twitter/callback',[TwitterLoginController::class, 'handleProviderCallback']);
+Route::get('auth/login/twitter', 'TwitterLoginController@redirectToProvider');
+Route::get('login/twitter/callback','TwitterLoginController@handleProviderCallback');
 
-Route::get('auth/login/google', [GoogleAuthController::class, 'getGoogleAuth']);
-Route::get('login/google/callback', [GoogleAuthController::class, 'authGoogleCallback']);
+Route::get('auth/login/google', 'GoogleAuthController@getGoogleAuth');
+Route::get('login/google/callback', 'GoogleAuthController@authGoogleCallback');
 
 Route::get('etc/policy', function () {
     return view('etc/policy');
@@ -47,9 +47,9 @@ Route::middleware(['auth:sanctum', 'verified'])->get('dashboard/event-create', f
     return view('dashboard/event-create');
 })->name('create-event');
 
-Route::post('dashboard/event-add', [EventAddController::class, 'CreateEvent'])->name('event-add');
+Route::post('dashboard/event-add', 'EventAddController@CreateEvent')->name('event-add');
 
-Route::post('dashboard/event-change-Preview', [EventAddController::class, 'ChangeEvent'])->name('event-change');
+Route::post('dashboard/event-change-Preview', 'EventAddController@ChangeEvent')->name('event-change');
 
 Route::middleware(['auth:sanctum', 'verified'])->get('dashboard/event-Preview', function () {
     return view('dashboard/event-Preview');

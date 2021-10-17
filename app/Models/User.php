@@ -62,9 +62,9 @@ class User extends Authenticatable
         'profile_photo_url',
     ];
 
-    public function event()
+    public function events()
     {
-      return $this->hasOne(Event::class);
+      return $this->belongsTo(Event::class);
     }
 
 }
