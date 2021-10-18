@@ -42,14 +42,6 @@ Route::get('etc/policy', function () {
     return view('etc/policy');
 })->name('policy');
 
-// Route::middleware(['auth:sanctum', 'verified'])->get('dashboard/event-create', function () {
-//     return view('dashboard/event-create');
-// })->name('create-event');
-
-// Route::post('dashboard/event-add', 'EventAddController@CreateEvent')->name('event-add');
-
-
-
 Route::middleware(['auth:sanctum', 'verified'])->get('dashboard/event-Preview', function () {
     return view('dashboard/event-Preview');
 })->name('event-Preview');

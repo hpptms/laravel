@@ -227,3 +227,30 @@
     width: 100%
   }
 }
+
+.sidebar{
+  max-width: 200px;
+  min-width: 200px;
+}
+
+.sidebar .brand{
+  color: black;
+  margin-left: 1rem;
+
+}
+.sidebar .nav-link{
+  background-color: rgba(255, 255, 255, 0.493);
+  color: black;
+}
+
+main{
+  transition: 0.3s all ease;
+}
+
+.p-4 {
+  padding: 0.4rem!important;
+}
+
+.p-top{
+  padding-top: 10px;
+}

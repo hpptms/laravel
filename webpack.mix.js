@@ -12,6 +12,7 @@ const mix = require('laravel-mix');
  */
 
 mix.js('resources/js/app.js', 'public/js')
+    .js('resources/js/top.js', 'public/js')
     .js('resources/js/eventadd.js', 'public/js')
     .js('resources/js/event-crate.js', 'public/js')
     .sass('resources/sass/custom.scss', 'public/css')
