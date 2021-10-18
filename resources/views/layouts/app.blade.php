@@ -7,20 +7,29 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta name="Description" content="メガホンでイベントを告知しよう" />
   <title>{{ config('app.name', 'Laravel') }}</title>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-QVYTLW4XVT"></script>
+  <script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
-  <!-- Fonts -->
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap">
-  <!-- Styles -->
-  <link rel="stylesheet"　href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-alpha1/css/bootstrap.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
-  <link rel="stylesheet" href="{{ mix('css/app.css') }}">
-  <link rel="stylesheet" href="{{ mix('/css/custom.css') }}">
+  gtag('config', 'G-QVYTLW4XVT');
+</script>
 
-  @livewireStyles
+<!-- Fonts -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap">
+<!-- Styles -->
+<link rel="stylesheet"　href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-alpha1/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+<link rel="stylesheet" href="{{ mix('css/app.css') }}">
+<link rel="stylesheet" href="{{ mix('/css/custom.css') }}">
 
-  <!-- Scripts -->
-  <script src="{{ mix('js/app.js') }}" defer></script>
-  <script src="{{ mix('js/top.js') }}" defer></script>
+@livewireStyles
+
+<!-- Scripts -->
+<script src="{{ mix('js/app.js') }}" defer></script>
+<script src="{{ mix('js/top.js') }}" defer></script>
 </head>
 <body class="h-100 bg-light">
   <main class="h-100">
@@ -28,8 +37,8 @@
       @include('parts.sidebar')
       <div class="page-content">
 
-          @include('parts.navigation-menu_top')
-          @yield('content')
+        @include('parts.navigation-menu_top')
+        @yield('content')
 
       </div>
     </div>
