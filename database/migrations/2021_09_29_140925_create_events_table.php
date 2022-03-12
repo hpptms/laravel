@@ -34,6 +34,7 @@ class CreateEventsTable extends Migration
             $table->text('public_id')->nullable(); //写真のid
             $table->text('video')->nullable(); //youtubeなど
             $table->text('video_id')->nullable(); //youtubeなど
+            $table->text('participant')->nullable(); //youtubeなど
             $table->integer('iine')->nullable(); //いいね
             $table->timestamps();
         });
