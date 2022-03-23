@@ -5,6 +5,7 @@
 /storage/*.key
 .env
 .env.heroku
+.env.pro
 .phpunit.result.cache
 docker-compose.override.yml
 Homestead.json

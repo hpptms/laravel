@@ -9,6 +9,7 @@
   <title>{{ config('app.name', 'Laravel') }}</title>
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-QVYTLW4XVT"></script>
+  <script defer data-domain="megaphone.gorone.site" src="https://plausible.io/js/plausible.js"></script>
   <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
